@@ -6,7 +6,9 @@ class RandomQuoteMachine extends React.Component {
   render() {
     return (
       <div id="quote-machine">
-        RQM
+        <p id="text">Quote</p>
+        <p id="author">Author</p>
+        <button id="new-quote">New Quote</button>
       </div>
     );
   }
