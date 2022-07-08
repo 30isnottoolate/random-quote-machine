@@ -11,6 +11,7 @@ class RandomQuoteMachine extends React.Component {
       quote: "Loading...",
       author: ""
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -19,7 +20,7 @@ class RandomQuoteMachine extends React.Component {
       return response.json();
     })
       .then(data => {
-        let randomIndex = this.randomIndexGen(data.quotes.length)
+      let randomIndex = this.randomIndexGen(data.quotes.length);
       this.setState({
         quotes: data.quotes,
         numOfQuotes: data.quotes.length,
@@ -27,6 +28,14 @@ class RandomQuoteMachine extends React.Component {
         author: data.quotes[randomIndex].author
       });
     });
+  }
+
+  handleClick() {
+    let randomIndex = this.randomIndexGen(this.state.numOfQuotes);
+    this.setState((state) => ({
+      quote: state.quotes[randomIndex].quote,
+      author: state.quotes[randomIndex].author
+    }));
   }
 
   randomIndexGen(numOfQuotes) {
@@ -38,7 +47,7 @@ class RandomQuoteMachine extends React.Component {
       <div id="quote-machine">
         <p id="text">{this.state.quote}</p>
         <p id="author">{this.state.author}</p>
-        <button id="new-quote">New Quote</button>
+        <button id="new-quote" onClick={this.handleClick}>New Quote</button>
       </div>
     );
   }
