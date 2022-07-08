@@ -19,13 +19,18 @@ class RandomQuoteMachine extends React.Component {
       return response.json();
     })
       .then(data => {
+        let randomIndex = this.randomIndexGen(data.quotes.length)
       this.setState({
         quotes: data.quotes,
         numOfQuotes: data.quotes.length,
-        quote: data.quotes[100].quote,
-        author: data.quotes[100].author
+        quote: data.quotes[randomIndex].quote,
+        author: data.quotes[randomIndex].author
       });
     });
+  }
+
+  randomIndexGen(numOfQuotes) {
+    return Math.floor(Math.random()*numOfQuotes);
   }
 
   render() {
