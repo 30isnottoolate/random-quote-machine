@@ -32,3 +32,33 @@ p {
   margin-top: 0px;
   margin-bottom: 30px;
 }
+
+#text {
+  font-size: 18px;
+}
+
+#author {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  background-color: #379683;
+  color: #05386B;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Poppins";
+  padding: 5px 10px;
+  border-width: 0;
+  border-radius: 3px;
+}
+
+#tweet-quote {
+  float: right;
+  text-decoration: none;
+  padding: 7px 10px;
+}
+
+.buttons:hover {
+  background-color: #5CDB95
+}
