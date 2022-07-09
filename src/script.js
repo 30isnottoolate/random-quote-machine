@@ -47,8 +47,8 @@ class RandomQuoteMachine extends React.Component {
       <div id="quote-machine">
         <p id="text">{this.state.quote}</p>
         <p id="author">{this.state.author}</p>
-        <button id="new-quote" onClick={this.handleClick}>New Quote</button>
-        <a id="tweet-quote" href={"https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + this.state.quote + '" ' + this.state.author)} target="_top">Tweet</a>
+        <button id="new-quote" className="buttons" onClick={this.handleClick}>New Quote</button>
+        <a id="tweet-quote" className="buttons" href={"https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + this.state.quote + '" ' + this.state.author)} target="_top">Tweet</a>
       </div>
     );
   }
