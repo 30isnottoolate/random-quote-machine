@@ -15,7 +15,7 @@ body {
   height: 100vh;
 }
 
-#quote-machine {
+#quote-box {
   background-color: #05386B;
   width: 650px;
   padding: 40px 50px;
@@ -26,7 +26,7 @@ body {
 }
 
 @media screen and (max-width: 675px) {
-  #quote-machine {
+  #quote-box {
     width: calc(95vw - 20px);
     margin: 0 auto;
     padding: 20px 25px;
