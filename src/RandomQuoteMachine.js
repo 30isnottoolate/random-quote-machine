@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './app_styles.css';
+import './RandomQuoteMachine.css';
 
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
