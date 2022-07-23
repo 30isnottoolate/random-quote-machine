@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './RandomQuoteMachine.css';
 
 class RandomQuoteMachine extends React.Component {
@@ -54,5 +53,4 @@ class RandomQuoteMachine extends React.Component {
   }
 }
 
-const container = ReactDOM.createRoot(document.getElementById('app-container'));
-container.render(<RandomQuoteMachine/>);
+export default RandomQuoteMachine;
